@@ -5,7 +5,7 @@ function VideoCardComponent(props) {
     return (
         <div className="video-card-component" onClick={ () => props.watchVideo(props.file) }> 
             <div className="image-preview"></div>
-            <div className="image-duration">{ props.duration }</div>
+            <div className="video-duration">{ props.duration }</div>
             <div className="video-information">
                 <img className="author-profile-image" src="images/profile-icon.png" alt={ props.authorName } />
                 <div>
