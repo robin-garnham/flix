@@ -3,7 +3,7 @@ import React from 'react';
 function VideoCardComponent(props) {
     
     return (
-        <div className="video-card-component"> 
+        <div className="video-card-component" onClick={ () => props.watchVideo(props.file) }> 
             <div className="image-preview"></div>
             <div className="image-duration">{ props.duration }</div>
             <div className="video-information">

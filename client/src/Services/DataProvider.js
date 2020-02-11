@@ -10,6 +10,10 @@ class DataProvider {
 
 	getUploadEndpoint () {
 		return `${this.hostname}/upload`;
+    }
+    
+    getPlaybackEndpoint (videoID) {
+		return `${this.hostname}/videos/${videoID}`;
 	}
 
 	getVideos () {
