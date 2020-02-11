@@ -31,10 +31,15 @@ module.exports.getVideos = async () => {
 
     const directoryContents = await readDirAsync(STORAGE_LOCATION);
 
-    return directoryContents.map((file) => {
+    return directoryContents.map((file, index) => {
         return {
+            authorName: 'Alex Gurr',
+            duration: '17:29',
+            id: index,
+            createdAt: generatedDate(),
             file,
-            createdAt: generatedDate()
+            timeAgo: '1 hour',
+            videoName: 'Holiday Highlights',
         };
     });
 };
