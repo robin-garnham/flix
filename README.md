@@ -3,10 +3,16 @@ A basic React project for a code challenge
 
 # Check-out this repository
 
-# Starting the server
+# Running the server tests
 cd server
+npm test
+
+# Starting the server
 npm start
 
-# Starting the client
+# Running the client tests
 cd ../client
+npm test a
+
+# Starting the client
 npm start
