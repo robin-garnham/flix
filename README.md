@@ -1,19 +1,19 @@
 # Flix
-A basic React project for a code challenge
+- A basic React project for a code challenge
 
 # Check-out this repository
-https://github.com/robin-garnham/flix.git
+- https://github.com/robin-garnham/flix.git
 
 # Running the server tests
-cd server
-npm test
+- cd server
+- npm test
 
 # Starting the server
-npm start
+- npm start
 
 # Running the client tests
-cd ../client
-npm test a
+- cd ../client
+- npm test a
 
 # Starting the client
-npm start
+- npm start
