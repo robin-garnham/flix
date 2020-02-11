@@ -38,7 +38,6 @@ describe("VideoService", () => {
         VideoService.storeVideo(request);
         expect(VideoPersistence.storeVideo).toHaveBeenCalled();
         expect(VideoPersistence.storeVideo).toHaveBeenCalledTimes(1);
-        expect(VideoPersistence.getVideoByID).toHaveBeenCalledWith(fakeUUID, fakePath, fakeFile);
     });
 
     test('getVideoByID invokes VideoPersistence correctly', () => {
