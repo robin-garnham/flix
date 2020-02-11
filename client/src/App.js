@@ -49,7 +49,6 @@ function App() {
           <header className="app-header">
             <img src="images/logo.png" className="site-logo" alt="Site Logo" />
             <button className="add-video" onClick={openUploadModal}></button>
-            {/* <div className="grey-bar"></div> */}
           </header>
           <div className="splash-image"></div>
           <VideoListComponent watchVideo={openPlaybackModal} videos={videos} />

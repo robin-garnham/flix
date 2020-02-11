@@ -10,24 +10,15 @@ function VideoUploadComponent(props) {
         return { url: DataProvider.getUploadEndpoint() } 
     }
 
-    const handleChangeStatus = ({ meta, file }, status) => { 
-        console.log(status, meta, file) 
-    };
-
-    const handleSubmit = (files) => { 
-        console.log(files.map(f => f.meta)) 
-    };
-
     return (
         <div className="video-upload"> 
             <h3>Upload Video</h3>
             <Dropzone
                 getUploadParams={getUploadParams}
-                onChangeStatus={handleChangeStatus}
-                onSubmit={handleSubmit}
+                onSubmit={props.hideModal}
                 accept="video/*"
              />
-             <button onClick={props.hideModal}>Close Window</button>
+             <button onClick={props.hideModal}>Cancel</button>
         </div>
     );
 }
