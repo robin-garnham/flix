@@ -5,10 +5,12 @@ const routerInstance = new Router();
 
 routerInstance.post('/upload', async (req, res, next) => {
 
-    const result = await VideoService.storeVideo(req);
+    await VideoService.storeVideo(req);
+
     res.send({
         result: "SUCCESS"
     });
+
     return next();
 });
 
