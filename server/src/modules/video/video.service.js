@@ -5,10 +5,12 @@ const VideoPersistence = require('./video.persistence');
 module.exports.storeVideo = async (req) => {
     
     const generatedID = uuidv4();
-    const fileName = _.get(req, 'files.fileset.name');
-    const filePath = _.get(req, 'files.fileset.path');
+    const fileName = _.get(req, 'files.file.name');
+    const filePath = _.get(req, 'files.file.path');
 
-    return await VideoPersistence.storeVideo(generatedID, fileName, filePath);
+    if(fileName && filePath) {
+        return await VideoPersistence.storeVideo(generatedID, fileName, filePath);
+    }
 };
 
 module.exports.getVideoByID = async (videoID) => {

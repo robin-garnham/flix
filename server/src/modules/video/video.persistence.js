@@ -2,7 +2,7 @@ const fs = require('fs');
 const { promisify } = require('util');
 const createDirAsync = promisify(fs.mkdir);
 const readDirAsync = promisify(fs.readdir);
-const writeFileAsync = promisify(fs.writeFile);
+const copyFileAsync = promisify(fs.copyFile);
 const STORAGE_LOCATION = './video-storage';
 
 function generatedDate () {
@@ -14,7 +14,7 @@ function generatedDate () {
 module.exports.storeVideo = async (videoID, fileName, filePath) => {
     
     await createDirAsync(`${STORAGE_LOCATION}/${videoID}`);
-    return await writeFileAsync(`${STORAGE_LOCATION}/${videoID}/${fileName}`, filePath);
+    return await copyFileAsync(filePath, `${STORAGE_LOCATION}/${videoID}/${fileName}`);
 };
 
 module.exports.getVideoByID = async (videoID) => {
@@ -31,7 +31,9 @@ module.exports.getVideos = async () => {
 
     const directoryContents = await readDirAsync(STORAGE_LOCATION);
 
-    return directoryContents.map((file, index) => {
+    const filteredList = directoryContents.filter(item => !(/(^|\/)\.[^\/\.]/g).test(item));
+
+    return filteredList.map((file, index) => {
         return {
             authorName: 'Richard Hendricks',
             duration: '17:29',
