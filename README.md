@@ -2,7 +2,7 @@
 A basic React project for a code challenge
 
 # Check-out this repository
-https://github.com/robin-garnham/myflix.git
+https://github.com/robin-garnham/flix.git
 
 # Running the server tests
 cd server
