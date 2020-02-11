@@ -33,7 +33,7 @@ module.exports.getVideos = async () => {
 
     return directoryContents.map((file, index) => {
         return {
-            authorName: 'Alex Gurr',
+            authorName: 'Richard Hendricks',
             duration: '17:29',
             id: index,
             createdAt: generatedDate(),

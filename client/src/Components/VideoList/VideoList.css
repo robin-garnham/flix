@@ -75,7 +75,7 @@
     }
 }
 
-@media (max-width: 900px) {  
+@media (min-width: 600px) and (max-width: 900px) {  
     .video-list-component .video-list {
         grid-template-columns: 1fr 1fr;
     }

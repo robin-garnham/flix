@@ -8,8 +8,8 @@ class DataProvider {
 		this.hostname = '//localhost:4000';
 	}
 
-	uploadVideo () {
-		return axios.post(`${this.hostname}/upload`);
+	getUploadEndpoint () {
+		return `${this.hostname}/upload`;
 	}
 
 	getVideos () {
